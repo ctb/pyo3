@@ -17,8 +17,7 @@ def test_vec_from_bytes():
 
 
 def test_vec_from_str():
-    with pytest.raises(ValueError):
-        sequence.vec_to_vec_pystring("123")
+    assert sequence.vec_to_vec_pystring("123") == ["1", "2", "3"]
 
 
 @pytest.mark.skipif(
